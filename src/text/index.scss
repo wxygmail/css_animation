@@ -1,0 +1,16 @@
+.text-bg {
+  font-size: 20px;
+  background: linear-gradient(to right, #22b75a 50%, pink 20%, yellow 10%, hotpink 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text_ani 4s linear infinite;
+}
+
+@keyframes text_ani {
+  0%{
+    background-position: left 0px top 0px;
+  }
+  100%{
+    background-position: left 270px top 0px;
+  }
+}

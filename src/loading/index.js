@@ -1,9 +1,10 @@
 import React from "react";
-import './index.scss'
+import './index.scss';
+import SquareBackground from "../components/squareBackground"
 
 const Loading = () => {
-  return <div className="loading">
+  return <SquareBackground>
     <div className="loading-content"></div>
-  </div>;
+  </SquareBackground>;
 };
 export default Loading;

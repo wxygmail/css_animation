@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
-import Loading from "./src/loading";
 import "./common/common.scss";
+import App from "./src/app"
 
-ReactDom.render(<Loading/>, document.getElementById("root"));
+ReactDom.render(<App/>, document.getElementById("root"));
