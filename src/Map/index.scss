@@ -1,0 +1,53 @@
+.border-spin {
+  width: 80%;
+  height: 700px;
+  overflow: hidden;
+}
+
+.BMap_bubble_pop {
+  //width: 200px !important;
+  text-align: center;
+  //left: 41px !important;
+  //top: 28px !important;
+}
+
+/*地图标题*/
+.BMap_bubble_title {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-top: 5px;
+  width: 100% !important;
+}
+
+.BMap_bubble_center {
+  height: 40px !important;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    left: 61px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-top: 30px solid #fff;
+  }
+}
+
+/* 消息内容 */
+.BMap_bubble_content {
+  height: auto !important;
+  left: 50%;
+  transform: translate(-50%, 0px);
+}
+
+/* 左上角删除按键 */
+.BMap_bubble_pop img {
+  display: none;
+  top: 72px!important;
+}
+.BMap_bubble_buttons{
+  display: none;
+}

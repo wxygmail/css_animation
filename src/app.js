@@ -1,6 +1,7 @@
 import React from "react";
 import Loading from "./loading";
 import Text from "./text";
+import Map from "./Map";
 
 const App = props => {
   return <div style={{
@@ -11,6 +12,7 @@ const App = props => {
   }}>
     <Loading/>
     <Text />
+    <Map />
   </div>
 }
 
