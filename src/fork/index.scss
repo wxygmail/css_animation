@@ -1,0 +1,64 @@
+$breakpoints: (
+        'xs-500': 'only screen and (max-width: 500px)',
+        'sm-100vw': 'screen and (max-width: 1200px) and (min-width: 500px)',
+        'lg-1200': 'only screen and (min-width: 1200px)',
+) !default;
+//unquote($query)：删除字符串中的引号；
+//quote($query)：给字符串添加引号。
+//inspect($query) Maps不能转换为纯CSS。作为变量的值或参数传递给CSS函数将会导致错误。
+//使用inspect($query) 函数以产生输出字符串复制代码
+//定义宽度
+$dev-width: 1200px;
+@mixin respond-to($arg) {
+  $query: map-get($breakpoints, $arg);
+  // 这里是scss error提示估计大部分人（包括我）都没怎么使用过
+  @if not $query {
+    @error 'No value found for `#{$arg}`. Please make sure it is  defined in ` $breakpoints ` map . ';
+  }
+  // 具体断点解释在这里，作者比较严谨，校验了$query合法性
+  @media #{if(type-of($query) == 'string', unquote($query), inspect($query))}
+  {
+    @if $arg == xs-500 {
+      $dev-width: 500;
+
+    }
+    @content;
+  }
+}
+
+@mixin change {
+  font-size: calc(#{$dev-width} / 1200 * 60);
+}
+
+html {
+  @media screen and (max-width: 500px) {
+    $dev-width: 500px;
+  }
+  @media screen and (max-width: 1200px) and (min-width: 500px) {
+    $dev-width: 100vw;
+  }
+  @media screen and (min-width: 1200px) {
+    $dev-width: 1200px
+  }
+  @include change
+}
+
+.fork {
+  width: 100px;
+  height: 100px;
+  background: #22b75a;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: bisque;
+  }
+}
+
+
+.text {
+  font-size: 1rem;
+  //width: 2rem;
+}

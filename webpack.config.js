@@ -27,7 +27,7 @@ module.exports = {
     rules: [
       {
         // 对".js"或".jsx"结尾的文件使用babel-loader进行转译
-        // babel-loader的配置放到".babelrc"文件内
+        // babel-loader的配置放到".babelrc"文件内 test: /\.(js|jsx)$/,
         test: /\.jsx?$/,
         use: "babel-loader"
       },
