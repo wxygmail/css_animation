@@ -2,7 +2,7 @@ import React from "react";
 import Loading from "./loading";
 import Text from "./text";
 import Map from "./Map";
-import Fork from "./fork";
+import Fork from "./Fork";
 
 const App = props => {
   return <div style={{
