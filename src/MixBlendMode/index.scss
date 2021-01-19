@@ -1,0 +1,35 @@
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box1 {
+  background: linear-gradient(30deg, rgba(130, 255, 0, .4), rgba(0, 84, 166, 1));
+  animation: move 6s infinite linear;
+}
+
+.box2 {
+  background: linear-gradient(180deg, rgba(180, 120, 65, .3), rgba(231, 16, 16, .8));
+  animation: move 3s infinite linear;
+  mix-blend-mode: difference;
+}
+.box3{
+  background: linear-gradient(600deg, rgb(241, 219, 10), rgba(109, 101, 101, 0.8));
+  animation: move 3s infinite linear;
+  mix-blend-mode: overlay;
+}
+
+@keyframes move {
+  50% {
+    filter: unset;
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+
+}

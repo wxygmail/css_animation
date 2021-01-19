@@ -1,8 +1,10 @@
 import React from "react";
-import Loading from "./loading";
-import Text from "./text";
+import Loading from "./Loading";
+import Text from "./Text";
 import Map from "./Map";
 import Fork from "./Fork";
+import MixBlendMode from "./MixBlendMode";
+import CircleJD from "./Circle_jindu";
 
 const App = props => {
   return <div style={{
@@ -11,6 +13,8 @@ const App = props => {
     marginTop: "50px",
     flexWrap: "wrap"
   }}>
+    <CircleJD />
+    <MixBlendMode />
     <Fork />
     <Loading/>
     <Text/>
