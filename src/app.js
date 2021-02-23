@@ -1,10 +1,12 @@
 import React from "react";
-import Loading from "./Loading";
-import Text from "./Text";
-import Map from "./Map";
-import Fork from "./Fork";
-import MixBlendMode from "./MixBlendMode";
-import CircleJD from "./Circle_jindu";
+import Loading from "./dynamic/Loading";
+import Text from "./dynamic/Text";
+import Map from "./static/Map";
+import Fork from "./static/Fork";
+import MixBlendMode from "./dynamic/MixBlendMode";
+import CircleJD from "./dynamic/Circle_jindu";
+import Testing from "./testing";
+import SquareRotation from "./dynamic/SquareRotation";
 
 const App = props => {
   return <div style={{
@@ -13,6 +15,7 @@ const App = props => {
     marginTop: "50px",
     flexWrap: "wrap"
   }}>
+    <SquareRotation />
     <CircleJD />
     <MixBlendMode />
     <Fork />

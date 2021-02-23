@@ -1,6 +1,6 @@
 import React from 'react';
 import "./index.scss";
-import SquareBackground from "../components/squareBackground";
+import SquareBackground from "../../components/squareBackground";
 
 const MixBlendMode = () => {
   return <SquareBackground>

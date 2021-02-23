@@ -1,5 +1,5 @@
 import React from "react";
-import SquareBackground from "../components/squareBackground";
+import SquareBackground from "../../components/squareBackground";
 import "./index.scss";
 
 const Text = props => {
