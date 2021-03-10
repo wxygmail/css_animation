@@ -1,0 +1,40 @@
+.line-yd {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  //background: #c0ffdf;
+  //filter: blur(1px);
+  &-wrap {
+    position: relative;
+    width: 20%;
+    height: 20%;
+    margin: 50px auto;
+    //radius越大就越细,配合before
+    border-radius: 40% 50% 45% 40%;
+    background: linear-gradient(#fff, #22b75a, #AA5EBB);
+    //开始的样式，里面那个运动的div
+    transform: scale(15) translate(0, -55%) rotate(0deg);
+    //动画
+    animation: line_yd_rotate 10s infinite linear alternate;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 97%;
+      height: 97%;
+      background: #FFFFFF;
+      border-radius: 40% 50% 45% 40%;
+      //居中
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+  }
+}
+
+@keyframes line_yd_rotate {
+  100% {
+    transform: scale(10) translate(0, -45%) rotate(360deg);
+  }
+}
+
