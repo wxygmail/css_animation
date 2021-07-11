@@ -23,7 +23,7 @@ const App = props => {
     <Loading/>
     <Text/>
     {/*获取百度ak,放置到index.html文件，再打开此组件*/}
-    {/*<Map/>*/}
+    <Map/>
   </div>
 }
 
