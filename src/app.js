@@ -7,6 +7,7 @@ import MixBlendMode from "./dynamic/MixBlendMode";
 import CircleJD from "./dynamic/Circle_jindu";
 import SquareRotation from "./dynamic/SquareRotation";
 import LineYunDong from "./dynamic/Line_yundong";
+import Cat from './static/Cat'
 
 const App = props => {
   return <div style={{
@@ -15,11 +16,12 @@ const App = props => {
     marginTop: "50px",
     flexWrap: "wrap"
   }}>
-    <LineYunDong />
-    <SquareRotation />
-    <CircleJD />
-    <MixBlendMode />
-    <Fork />
+    <Cat />
+    <LineYunDong/>
+    <SquareRotation/>
+    <CircleJD/>
+    <MixBlendMode/>
+    <Fork/>
     <Loading/>
     <Text/>
     {/*获取百度ak,放置到index.html文件，再打开此组件*/}
